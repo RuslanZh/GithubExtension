@@ -1,0 +1,7 @@
+/*@font-face {
+    font-family: 'FontAwesome';
+    src: url('./bootstrap/fonts/fontawesome-webfont.woff');
+}*/
+@import url("./bootstrap/font-awesome.css");
+@import url("./bootstrap/bootstrap.min.css");
+

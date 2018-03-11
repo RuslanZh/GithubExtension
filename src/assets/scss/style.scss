@@ -1,0 +1,23 @@
+@import url("./bootstrap.scss");
+
+body { 
+    width: 700px;
+    min-height: 500px;
+    padding: 0 15px;
+}
+
+.fa.fa-sort {
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.listRepositories > table > tbody > tr {
+    cursor: pointer;
+}
+
+.selectedRepository {
+    margin-top: 20px;
+}

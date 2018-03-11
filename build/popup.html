@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+<title>Animated Github</title>
+<!-- section for bootsrap files - its need replace but for test version is normal -->
+<!-- jquery used only in bootstrap and would be good replace bootstrap on version without jquery -->
+<script src="./assets/bootstrap/jquery.min.js"></script>
+<script src="./assets/bootstrap/tether.min.js"></script>
+<script src="./assets/bootstrap/bootstrap.min.js"></script>
+<!-- end -->
+<script src="./popup.min.js"></script>
+<link href="/./assets/css/popup.css" rel="stylesheet"><link href="/./assets/css/content.css" rel="stylesheet"></head>
+<body class="bg-light">
+    <div class="controlContainer bg-light">
+        <div class="container">
+            <h2 id="userName">Anonymous</h2>
+            <button type="button" id="login" class="btn btn-primary">Login</button>
+            <button type="button" id="logout" class="btn btn-primary">Logout</button>
+        </div>
+        <form class="controlForm collapse show mt-5" id="collapseMenu">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#searchRepositoriesContainer" role="tab">Search Repositories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" data-toggle="tab" href="#myRepositoriesContainer" role="tab">My Repositories</a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="searchRepositoriesContainer" role="tabpanel">
+                    <div class="listRepositories">
+                        <table class="table table-inverse">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name Repository</th>
+                                    <th>Username</th>
+                                    <th>Stars <i class="fa fa-fw fa-sort starsSort"></i></th>
+                                    <th>Issues</th>
+                                    <th>Forks<i class="fa fa-fw fa-sort forksSort"></i></th>
+                                    <th>Updated <i class="fa fa-fw fa-sort updatedSort"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            <label for="repositoryName">Repository Name</label>
+                            <input name="repositoryName" class="form-control big-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="repositoryAuthor">Repository Author</label>
+                            <input name="repositoryAuthor" class="form-control big-input" type="text">
+                        </div>
+                        <button type="button" id="searchRepositories" class="btn btn-primary">Search Repositories</button>
+                    </div>
+                    <div class="selectedRepository d-none">
+                        <h3>Name Repository: <span class="repoName"></span></h3>
+                        <p>Username: <span class="repoUserName"></span></p>
+                        <p>URL: <a class="repoURL"></a></p>
+                        <p>Stars: <span class="repoStars"></span></p>
+                        <p>Issues: <span class="repoIssues"></span></p>
+                        <p>Forks: <span class="repoForks"></span></p>
+                        <button type="button" id="backToListRepositories" class="btn btn-primary">Beck To List of Repositories</button>
+                    </div>
+                </div>
+                <div class="tab-pane" id="myRepositoriesContainer" role="tabpanel">
+                    <table class="table table-inverse">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name Repository</th>
+                                <th>Stars</th>
+                                <th>Issues</th>
+                                <th>Forks</th>
+                                <th>Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+<script type="text/javascript" src="/popup.min.js"></script><script type="text/javascript" src="/content.min.js"></script><script type="text/javascript" src="/iconAnimation.min.js"></script></body>
+</html>
